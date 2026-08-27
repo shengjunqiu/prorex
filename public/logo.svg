@@ -1,22 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
   <defs>
-    <linearGradient id="prorexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stopColor="#38BDF8"/>
-      <stop offset="50%" stopColor="#0EA5E9"/>
-      <stop offset="100%" stopColor="#0284C7"/>
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#0EA5E9"/>
+      <stop offset="100%" stop-color="#2563EB"/>
     </linearGradient>
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0EA5E9" flood-opacity="0.5"/>
-    </filter>
   </defs>
-  
-  <!-- Outer rounded shield/app icon -->
-  <rect x="2" y="2" width="60" height="60" rx="16" fill="#060B14" stroke="url(#prorexGrad)" stroke-width="2.5"/>
-  
-  <!-- Stylized P geometric mark -->
-  <path d="M20 46V18H34C39.5228 18 44 22.0294 44 27C44 31.9706 39.5228 36 34 36H28V46H20Z" fill="url(#prorexGrad)" filter="url(#glow)"/>
-  <path d="M28 24V30H33.5C35.433 30 37 28.6569 37 27C37 25.3431 35.433 24 33.5 24H28Z" fill="#060B14"/>
-  
-  <!-- Tech dot accent -->
-  <circle cx="45" cy="45" r="3.5" fill="#38BDF8"/>
+
+  <!-- Bright Solid Vibrant Blue Rounded Squircle Background -->
+  <rect width="64" height="64" rx="16" fill="url(#blueGradient)"/>
+
+  <!-- Crisp Pure White Bold "P" Logo Mark -->
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M18 14C15.7909 14 14 15.7909 14 18V46C14 48.2091 15.7909 50 18 50C20.2091 50 22 48.2091 22 46V38H34C42.8366 38 50 30.8366 50 22C50 17.5799 48.2443 14 44 14H18ZM22 22H34C36.2091 22 38 23.7909 38 26C38 28.2091 36.2091 30 34 30H22V22Z" fill="#FFFFFF"/>
+
+  <!-- Small Bright White Accent Dot -->
+  <circle cx="48" cy="46" r="4" fill="#FFFFFF"/>
 </svg>
