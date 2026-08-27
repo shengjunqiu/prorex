@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowUpRight, ChevronRight, Activity, Zap, ShieldCheck } from 'lucide-react';
+import { TradingViewMiniChart } from './TradingViewMiniChart';
 
 export const Hero: React.FC = () => {
   return (
@@ -61,7 +62,7 @@ export const Hero: React.FC = () => {
               </div>
               <div className="flex flex-col border-x border-slate-800/80 px-3 sm:px-6">
                 <span className="text-xs text-slate-400 font-medium">Leverage</span>
-                <span className="text-lg sm:text-xl font-bold text-sky-400 mt-0.5">Up to 1:200</span>
+                <span className="text-lg sm:text-xl font-bold text-sky-400 mt-0.5">Up to 1:1000</span>
               </div>
               <div className="flex flex-col pl-2 sm:pl-0">
                 <span className="text-xs text-slate-400 font-medium">Min. trade</span>
@@ -96,42 +97,9 @@ export const Hero: React.FC = () => {
                 <span className="text-xs text-slate-400 font-mono">0.01s Exec</span>
               </div>
 
-              {/* Central Chart Graphic Mock */}
-              <div className="bg-[#050B16] rounded-xl p-4 border border-sky-500/10 mb-5">
-                <div className="flex items-center justify-between mb-3">
-                  <div>
-                    <span className="text-xs font-semibold text-slate-400 block">EUR/USD Spot</span>
-                    <span className="text-2xl font-bold text-white font-mono">1.16842</span>
-                  </div>
-                  <div className="text-right">
-                    <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/25">
-                      +0.24%
-                    </span>
-                    <span className="text-[10px] text-slate-500 block mt-1">24H High: 1.1710</span>
-                  </div>
-                </div>
-
-                {/* Simulated SVG Candle / Line Wave */}
-                <div className="h-28 w-full relative flex items-end">
-                  <svg className="w-full h-full overflow-visible" viewBox="0 0 300 100" preserveAspectRatio="none">
-                    <defs>
-                      <linearGradient id="chartGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stopColor="#0EA5E9" stopOpacity="0.4" />
-                        <stop offset="100%" stopColor="#0EA5E9" stopOpacity="0.0" />
-                      </linearGradient>
-                    </defs>
-                    <path
-                      d="M0,70 Q40,30 80,55 T160,25 T240,40 T300,10 L300,100 L0,100 Z"
-                      fill="url(#chartGrad)"
-                    />
-                    <path
-                      d="M0,70 Q40,30 80,55 T160,25 T240,40 T300,10"
-                      fill="none"
-                      stroke="#38BDF8"
-                      strokeWidth="2.5"
-                    />
-                  </svg>
-                </div>
+              {/* Central Chart Graphic Mock -> Replaced with Real-Time TradingView Widget */}
+              <div className="bg-[#050B16] rounded-xl p-2 border border-sky-500/10 mb-5 min-h-[220px]">
+                <TradingViewMiniChart />
               </div>
 
               {/* Bottom Micro Features */}

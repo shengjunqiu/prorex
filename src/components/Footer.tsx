@@ -30,7 +30,8 @@ export const Footer: React.FC = () => {
                 <li><a href="#markets" className="hover:text-sky-400 transition-colors">Forex</a></li>
                 <li><a href="#markets" className="hover:text-sky-400 transition-colors">Metals</a></li>
                 <li><a href="#markets" className="hover:text-sky-400 transition-colors">Indices</a></li>
-                <li><a href="#markets" className="hover:text-sky-400 transition-colors">Share CFDs</a></li>
+                <li><a href="#markets" className="hover:text-sky-400 transition-colors">Energies</a></li>
+                <li><a href="#markets" className="hover:text-sky-400 transition-colors">Cryptocurrencies</a></li>
               </ul>
             </div>
 
@@ -38,7 +39,8 @@ export const Footer: React.FC = () => {
               <h4 className="text-white font-semibold text-sm mb-3">Accounts</h4>
               <ul className="space-y-2">
                 <li><a href="#accounts" className="hover:text-sky-400 transition-colors">Standard Account</a></li>
-                <li><a href="#accounts" className="hover:text-sky-400 transition-colors">ECN Account</a></li>
+                <li><a href="#accounts" className="hover:text-sky-400 transition-colors">Pro Account</a></li>
+                <li><a href="#accounts" className="hover:text-sky-400 transition-colors">Cents Account</a></li>
                 <li><a href="#accounts" className="hover:text-sky-400 transition-colors">Open Account</a></li>
               </ul>
             </div>
@@ -65,19 +67,19 @@ export const Footer: React.FC = () => {
 
         </div>
 
-        {/* Regulatory & Risk Disclaimers (Exact Prorex copy) */}
+        {/* Regulatory & Risk Disclaimers */}
         <div className="py-8 space-y-4 text-[11px] text-slate-500 leading-relaxed border-b border-slate-800/80">
           <div className="flex items-start gap-2">
             <AlertTriangle className="w-4 h-4 text-amber-500/80 shrink-0 mt-0.5" />
             <p>
-              <strong className="text-slate-400 font-semibold">Risk warning: </strong>
-              Contracts for Difference (CFDs) are complex leveraged products. Leverage can amplify both gains and losses, and you may lose all of your invested capital. Consider whether you understand how CFDs work and whether you can afford the high risk of loss before trading.
+              <strong className="text-slate-400 font-semibold">Risk Warning: </strong>
+              Trading Contracts for Difference (CFDs) and other leveraged products involves a high level of risk and may not be suitable for all investors. Leverage can work both for and against you, and you may lose all of your invested capital. Before trading, ensure that you fully understand the risks involved and consider your investment objectives, experience and risk tolerance. Please refer to our Risk Disclosure for further information.
             </p>
           </div>
 
           <p>
-            <strong className="text-slate-400 font-semibold">Regional restrictions: </strong>
-            Services are not offered where their provision would be contrary to local laws or regulations. Product availability and account conditions may differ by jurisdiction.
+            <strong className="text-slate-400 font-semibold">Regional Restrictions: </strong>
+            Prorex Limited does not provide services to residents of jurisdictions where such distribution or use would be contrary to local laws or regulations. Certain products, services and account features may not be available in all jurisdictions. It is the client's responsibility to ensure that accessing and using our services is permitted under the laws applicable to them.
           </p>
         </div>
 

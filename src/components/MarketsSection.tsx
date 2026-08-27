@@ -1,22 +1,43 @@
 import React, { useState } from 'react';
 import { MARKET_CATEGORIES } from '../data/siteContent';
-import { ArrowRight, TrendingUp, Layers, BarChart3, Coins, CircleDollarSign } from 'lucide-react';
+import { ArrowRight, TrendingUp, BarChart3, Coins, CircleDollarSign, Flame, Bitcoin, Clock, MonitorCheck, Smartphone } from 'lucide-react';
 
-export const MarketsSection: React.FC = () => {
+interface MarketsSectionProps {
+  onOpenProducts?: (category?: string) => void;
+}
+
+export const MarketsSection: React.FC<MarketsSectionProps> = ({ onOpenProducts }) => {
   const [activeTab, setActiveTab] = useState('forex');
 
-  const getCategoryIcon = (id: string) => {
+  const getCategoryIcon = (id: string, className = "w-5 h-5") => {
     switch (id) {
       case 'forex':
-        return <CircleDollarSign className="w-5 h-5 text-sky-400" />;
+        return <CircleDollarSign className={`${className} text-sky-400`} />;
       case 'metals':
-        return <Coins className="w-5 h-5 text-amber-400" />;
+        return <Coins className={`${className} text-amber-400`} />;
       case 'indices':
-        return <BarChart3 className="w-5 h-5 text-blue-400" />;
-      case 'shares':
-        return <Layers className="w-5 h-5 text-emerald-400" />;
+        return <BarChart3 className={`${className} text-blue-400`} />;
+      case 'energies':
+        return <Flame className={`${className} text-orange-400`} />;
+      case 'crypto':
+        return <Bitcoin className={`${className} text-purple-400`} />;
       default:
-        return <TrendingUp className="w-5 h-5 text-sky-400" />;
+        return <TrendingUp className={`${className} text-sky-400`} />;
+    }
+  };
+
+  const handleActionClick = (e: React.MouseEvent, categoryId: string) => {
+    e.preventDefault();
+    if (onOpenProducts) {
+      // Map category id to product category title
+      const catMap: Record<string, string> = {
+        forex: 'Forex',
+        indices: 'Indices',
+        energies: 'Energies',
+        crypto: 'Crypto',
+        metals: 'Metals'
+      };
+      onOpenProducts(catMap[categoryId] || 'All');
     }
   };
 
@@ -67,7 +88,7 @@ export const MarketsSection: React.FC = () => {
         </div>
 
         {/* Bento Grid Display of Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {MARKET_CATEGORIES.map((item) => {
             const isSelected = activeTab === item.id;
             return (
@@ -81,18 +102,15 @@ export const MarketsSection: React.FC = () => {
                 }`}
               >
                 <div>
-                  {/* Top Header inside Card */}
+                  {/* Top Header inside Card: Proper Icon without 01/02 badges */}
                   <div className="flex items-center justify-between mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center font-bold text-sky-400">
-                      {item.tag}
+                    <div className="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center">
+                      {getCategoryIcon(item.id, "w-6 h-6")}
                     </div>
-                    <span className="text-xs font-mono font-semibold text-slate-500">
-                      {item.number}
-                    </span>
                   </div>
 
-                  <h3 className="text-2xl font-bold text-white mb-2">{item.title}</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                  <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                  <p className="text-slate-400 text-xs leading-relaxed mb-6">
                     {item.description}
                   </p>
 
@@ -103,9 +121,9 @@ export const MarketsSection: React.FC = () => {
                         key={pair.name}
                         className="flex items-center justify-between text-xs py-1.5 px-2.5 rounded-lg bg-[#050B16] border border-sky-500/5"
                       >
-                        <span className="font-semibold text-slate-300">{pair.name}</span>
-                        <div className="flex items-center gap-2">
-                          <span className="text-[10px] text-slate-500">Spread: {pair.spread}</span>
+                        <span className="font-semibold text-slate-300 text-[11px] truncate">{pair.name}</span>
+                        <div className="flex items-center gap-1.5 ml-1">
+                          <span className="text-[10px] text-slate-500">{pair.spread}</span>
                           <span className="text-[10px] text-sky-400 font-mono font-semibold">{pair.lev}</span>
                         </div>
                       </div>
@@ -113,20 +131,21 @@ export const MarketsSection: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Bottom CTA Link */}
-                <a
-                  href={item.link}
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-sky-400 hover:text-sky-300 transition-colors pt-2 border-t border-sky-500/10"
+                {/* Bottom CTA Link (Triggers Product Specification Modal) */}
+                <button
+                  type="button"
+                  onClick={(e) => handleActionClick(e, item.id)}
+                  className="w-full inline-flex items-center justify-between text-xs font-semibold text-sky-400 hover:text-sky-300 transition-colors pt-3 border-t border-sky-500/10 text-left"
                 >
                   <span>{item.actionText}</span>
                   <ArrowRight className="w-4 h-4" />
-                </a>
+                </button>
               </div>
             );
           })}
         </div>
 
-        {/* Global Access Feature Strip (Follow opportunity across borders) */}
+        {/* Global Access Feature Strip with added visual icons (Slide 4 request) */}
         <div className="mt-16 rounded-2xl p-8 bg-gradient-to-r from-[#0B172E] via-[#0D1E3A] to-[#0A152A] border border-sky-500/20 shadow-xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-6">
@@ -142,15 +161,24 @@ export const MarketsSection: React.FC = () => {
             </div>
 
             <div className="lg:col-span-6 grid grid-cols-3 gap-4 border-t lg:border-t-0 lg:border-l border-sky-500/20 pt-6 lg:pt-0 lg:pl-8">
-              <div className="flex flex-col">
+              <div className="flex flex-col items-start">
+                <div className="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center mb-2">
+                  <Clock className="w-5 h-5 text-sky-400" />
+                </div>
                 <span className="text-3xl sm:text-4xl font-extrabold text-white font-mono">5<span className="text-sky-400">d</span></span>
                 <span className="text-xs text-slate-400 mt-1">Weekly market access</span>
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col items-start">
+                <div className="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center mb-2">
+                  <MonitorCheck className="w-5 h-5 text-sky-400" />
+                </div>
                 <span className="text-3xl sm:text-4xl font-extrabold text-white font-mono">MT5</span>
                 <span className="text-xs text-slate-400 mt-1">One connected platform</span>
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col items-start">
+                <div className="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center mb-2">
+                  <Smartphone className="w-5 h-5 text-sky-400" />
+                </div>
                 <span className="text-3xl sm:text-4xl font-extrabold text-white font-mono">2</span>
                 <span className="text-xs text-slate-400 mt-1">Desktop and mobile</span>
               </div>
@@ -162,3 +190,4 @@ export const MarketsSection: React.FC = () => {
     </section>
   );
 };
+

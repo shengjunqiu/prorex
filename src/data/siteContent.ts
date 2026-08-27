@@ -21,62 +21,62 @@ export const TICKER_ITEMS: MarketTickerItem[] = [
 export const MARKET_CATEGORIES = [
   {
     id: 'forex',
-    tag: 'FX',
-    number: '01',
     title: 'Forex',
     description: 'Trade major, minor and emerging currency pairs around the clock, five days a week.',
     actionText: 'Discover forex →',
-    link: '#accounts',
     pairs: [
-      { name: 'EUR/USD', spread: '0.1 pips', lev: '1:200' },
-      { name: 'GBP/USD', spread: '0.2 pips', lev: '1:200' },
-      { name: 'USD/JPY', spread: '0.1 pips', lev: '1:200' },
-      { name: 'AUD/USD', spread: '0.3 pips', lev: '1:200' }
-    ]
-  },
-  {
-    id: 'metals',
-    tag: 'Au',
-    number: '02',
-    title: 'Metals',
-    description: 'Explore gold and other precious metals as part of a diversified trading strategy.',
-    actionText: 'Explore metals →',
-    link: '#accounts',
-    pairs: [
-      { name: 'XAU/USD (Gold)', spread: '1.2 pts', lev: '1:100' },
-      { name: 'XAG/USD (Silver)', spread: '1.8 pts', lev: '1:100' },
-      { name: 'Platinum', spread: '2.5 pts', lev: '1:50' },
-      { name: 'Palladium', spread: '3.0 pts', lev: '1:50' }
+      { name: 'EUR/USD', spread: '0.1 pips', lev: '1:1000' },
+      { name: 'GBP/USD', spread: '0.2 pips', lev: '1:1000' },
+      { name: 'USD/JPY', spread: '0.1 pips', lev: '1:1000' },
+      { name: 'AUD/USD', spread: '0.3 pips', lev: '1:1000' }
     ]
   },
   {
     id: 'indices',
-    tag: 'IX',
-    number: '03',
     title: 'Indices',
-    description: 'Follow the performance of leading market benchmarks through index CFDs.',
+    description: 'Follow the performance of leading global market benchmarks through index CFDs.',
     actionText: 'View indices →',
-    link: '#accounts',
     pairs: [
-      { name: 'US500 (S&P)', spread: '0.4 pts', lev: '1:100' },
-      { name: 'US100 (Nasdaq)', spread: '0.8 pts', lev: '1:100' },
-      { name: 'US30 (Dow Jones)', spread: '1.5 pts', lev: '1:100' },
-      { name: 'UK100 (FTSE)', spread: '1.0 pts', lev: '1:100' }
+      { name: 'US500 (S&P)', spread: '0.4 pts', lev: '1:1000' },
+      { name: 'US100 (Nasdaq)', spread: '0.8 pts', lev: '1:1000' },
+      { name: 'US30 (Dow Jones)', spread: '1.5 pts', lev: '1:1000' },
+      { name: 'UK100 (FTSE)', spread: '1.0 pts', lev: '1:1000' }
     ]
   },
   {
-    id: 'shares',
-    tag: 'EQ',
-    number: '04',
-    title: 'Share CFDs',
-    description: 'Take a position on selected global companies without owning the underlying asset.',
-    actionText: 'Browse shares →',
-    link: '#accounts',
+    id: 'energies',
+    title: 'Energies',
+    description: 'Trade global crude energy commodities including Spot Brent and WTI crude oil.',
+    actionText: 'Explore energies →',
     pairs: [
-      { name: 'Apple Inc (AAPL)', spread: 'Direct', lev: '1:20' },
-      { name: 'NVIDIA (NVDA)', spread: 'Direct', lev: '1:20' },
-      { name: 'Microsoft (MSFT)', spread: 'Direct', lev: '1:20' },
-      { name: 'Tesla (TSLA)', spread: 'Direct', lev: '1:20' }
+      { name: 'UKOil (Brent)', spread: '2.0 pts', lev: '1:1000' },
+      { name: 'USOil (WTI)', spread: '2.0 pts', lev: '1:1000' },
+      { name: 'Natural Gas', spread: '2.5 pts', lev: '1:1000' },
+      { name: 'Gasoline', spread: '3.0 pts', lev: '1:1000' }
+    ]
+  },
+  {
+    id: 'crypto',
+    title: 'Cryptocurrencies',
+    description: 'Gain exposure to top digital currencies with flexible leverage and 24/7 trading availability.',
+    actionText: 'Discover crypto →',
+    pairs: [
+      { name: 'BTC/USD (Bitcoin)', spread: 'Tight', lev: '1:1000' },
+      { name: 'ETH/USD (Ethereum)', spread: 'Tight', lev: '1:1000' },
+      { name: 'LTC/USD (Litecoin)', spread: 'Tight', lev: '1:1000' },
+      { name: 'BCH/USD (Bitcoin Cash)', spread: 'Tight', lev: '1:1000' }
+    ]
+  },
+  {
+    id: 'metals',
+    title: 'Metals',
+    description: 'Explore gold and silver as precious safe-haven metals for your trading portfolio.',
+    actionText: 'Explore metals →',
+    pairs: [
+      { name: 'XAU/USD (Gold)', spread: '1.2 pts', lev: '1:1000' },
+      { name: 'XAG/USD (Silver)', spread: '1.8 pts', lev: '1:1000' },
+      { name: 'Platinum', spread: '2.5 pts', lev: '1:1000' },
+      { name: 'Palladium', spread: '3.0 pts', lev: '1:1000' }
     ]
   }
 ];

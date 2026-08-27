@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Check, ArrowUpRight, ShieldCheck, Zap } from 'lucide-react';
 
 export const AccountsSection: React.FC = () => {
-  const [activeType, setActiveType] = useState<'standard' | 'ecn'>('standard');
+  const [activeType, setActiveType] = useState<'standard' | 'pro' | 'cents'>('standard');
 
   return (
     <section id="accounts" className="py-24 relative overflow-hidden bg-background">
@@ -43,14 +43,24 @@ export const AccountsSection: React.FC = () => {
               Standard
             </button>
             <button
-              onClick={() => setActiveType('ecn')}
+              onClick={() => setActiveType('pro')}
               className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 ${
-                activeType === 'ecn'
+                activeType === 'pro'
                   ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/30'
                   : 'text-slate-400 hover:text-white'
               }`}
             >
-              ECN
+              Pro
+            </button>
+            <button
+              onClick={() => setActiveType('cents')}
+              className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 ${
+                activeType === 'cents'
+                  ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/30'
+                  : 'text-slate-400 hover:text-white'
+              }`}
+            >
+              Cents
             </button>
           </div>
         </div>
@@ -93,13 +103,13 @@ export const AccountsSection: React.FC = () => {
 
                   <div className="flex flex-col">
                     <span className="text-xs text-slate-400 font-medium">Minimum deposit</span>
-                    <span className="text-2xl font-bold text-white font-mono mt-1">$100</span>
+                    <span className="text-2xl font-bold text-white font-mono mt-1">$10</span>
                     <span className="text-[11px] text-slate-500">to get started</span>
                   </div>
 
                   <div className="flex flex-col border-t border-slate-800 pt-3">
                     <span className="text-xs text-slate-400 font-medium">Maximum leverage</span>
-                    <span className="text-xl font-bold text-sky-400 font-mono mt-1">1:200</span>
+                    <span className="text-xl font-bold text-sky-400 font-mono mt-1">1:1000</span>
                     <span className="text-[11px] text-slate-500">subject to eligibility</span>
                   </div>
 
@@ -134,7 +144,7 @@ export const AccountsSection: React.FC = () => {
               </div>
 
             </div>
-          ) : (
+          ) : activeType === 'pro' ? (
             <div className="relative rounded-3xl p-8 sm:p-12 bg-gradient-to-b from-[#0C1B35] via-[#09152B] to-[#060D1A] border-2 border-sky-400/40 shadow-2xl shadow-sky-500/10">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 text-xs font-bold uppercase tracking-wider mb-6">
                 <Zap className="w-4 h-4" />
@@ -144,7 +154,7 @@ export const AccountsSection: React.FC = () => {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div className="lg:col-span-7">
                   <h3 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">
-                    ECN Account
+                    Pro Account
                   </h3>
                   <p className="text-slate-300 text-base leading-relaxed mb-8">
                     Direct raw market spreads from 0.0 pips for high-volume traders and automated strategies.
@@ -154,7 +164,7 @@ export const AccountsSection: React.FC = () => {
                     href="#"
                     className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-base font-semibold text-white bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 hover:from-sky-400 hover:to-blue-500 shadow-xl shadow-sky-500/30 hover:shadow-sky-500/50 hover:-translate-y-0.5 transition-all duration-200"
                   >
-                    <span>Open ECN account</span>
+                    <span>Open Pro account</span>
                     <ArrowUpRight className="w-5 h-5" />
                   </a>
                 </div>
@@ -168,19 +178,19 @@ export const AccountsSection: React.FC = () => {
 
                   <div className="flex flex-col">
                     <span className="text-xs text-slate-400 font-medium">Minimum deposit</span>
-                    <span className="text-2xl font-bold text-white font-mono mt-1">$500</span>
+                    <span className="text-2xl font-bold text-white font-mono mt-1">$10</span>
                     <span className="text-[11px] text-slate-500">to get started</span>
                   </div>
 
                   <div className="flex flex-col border-t border-slate-800 pt-3">
                     <span className="text-xs text-slate-400 font-medium">Maximum leverage</span>
-                    <span className="text-xl font-bold text-sky-400 font-mono mt-1">1:200</span>
+                    <span className="text-xl font-bold text-sky-400 font-mono mt-1">1:1000</span>
                     <span className="text-[11px] text-slate-500">subject to eligibility</span>
                   </div>
 
                   <div className="flex flex-col border-t border-slate-800 pt-3">
-                    <span className="text-xs text-slate-400 font-medium">Execution</span>
-                    <span className="text-xl font-bold text-emerald-400 font-mono mt-1">Market</span>
+                    <span className="text-xs text-slate-400 font-medium">Spread Type</span>
+                    <span className="text-xl font-bold text-emerald-400 font-mono mt-1">Low Spread</span>
                     <span className="text-[11px] text-slate-500">ultra-low latency</span>
                   </div>
                 </div>
@@ -204,6 +214,80 @@ export const AccountsSection: React.FC = () => {
                     <Check className="w-3.5 h-3.5" />
                   </div>
                   <span>Priority Execution Route</span>
+                </div>
+              </div>
+
+            </div>
+          ) : (
+            <div className="relative rounded-3xl p-8 sm:p-12 bg-gradient-to-b from-[#0C1B35] via-[#09152B] to-[#060D1A] border-2 border-sky-400/40 shadow-2xl shadow-sky-500/10">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs font-bold uppercase tracking-wider mb-6">
+                <ShieldCheck className="w-4 h-4" />
+                <span>Micro-lot trading with minimal risk</span>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div className="lg:col-span-7">
+                  <h3 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">
+                    Cents Account
+                  </h3>
+                  <p className="text-slate-300 text-base leading-relaxed mb-8">
+                    Trade in cent lots (USC) to test strategies and manage risk with minimal capital exposure.
+                  </p>
+
+                  <a
+                    href="#"
+                    className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-base font-semibold text-white bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 hover:from-sky-400 hover:to-blue-500 shadow-xl shadow-sky-500/30 hover:shadow-sky-500/50 hover:-translate-y-0.5 transition-all duration-200"
+                  >
+                    <span>Open Cents account</span>
+                    <ArrowUpRight className="w-5 h-5" />
+                  </a>
+                </div>
+
+                <div className="lg:col-span-5 grid grid-cols-2 gap-4 bg-[#050C18]/80 p-6 rounded-2xl border border-sky-500/15">
+                  <div className="flex flex-col">
+                    <span className="text-xs text-slate-400 font-medium">Commission</span>
+                    <span className="text-2xl font-bold text-emerald-400 font-mono mt-1">$0</span>
+                    <span className="text-[11px] text-slate-500">per lot</span>
+                  </div>
+
+                  <div className="flex flex-col">
+                    <span className="text-xs text-slate-400 font-medium">Minimum deposit</span>
+                    <span className="text-2xl font-bold text-white font-mono mt-1">$10</span>
+                    <span className="text-[11px] text-slate-500">to get started</span>
+                  </div>
+
+                  <div className="flex flex-col border-t border-slate-800 pt-3">
+                    <span className="text-xs text-slate-400 font-medium">Maximum leverage</span>
+                    <span className="text-xl font-bold text-sky-400 font-mono mt-1">1:1000</span>
+                    <span className="text-[11px] text-slate-500">subject to eligibility</span>
+                  </div>
+
+                  <div className="flex flex-col border-t border-slate-800 pt-3">
+                    <span className="text-xs text-slate-400 font-medium">Account Currency</span>
+                    <span className="text-xl font-bold text-amber-400 font-mono mt-1">USC</span>
+                    <span className="text-[11px] text-slate-500">Cent denominations</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 pt-8 border-t border-sky-500/10 text-sm text-slate-300">
+                <div className="flex items-center gap-2">
+                  <div className="w-5 h-5 rounded-full bg-sky-500/20 flex items-center justify-center text-sky-400">
+                    <Check className="w-3.5 h-3.5" />
+                  </div>
+                  <span>Ideal for Strategy Testing</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-5 h-5 rounded-full bg-sky-500/20 flex items-center justify-center text-sky-400">
+                    <Check className="w-3.5 h-3.5" />
+                  </div>
+                  <span>MetaTrader 5 Access</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-5 h-5 rounded-full bg-sky-500/20 flex items-center justify-center text-sky-400">
+                    <Check className="w-3.5 h-3.5" />
+                  </div>
+                  <span>Full EA Compatibility</span>
                 </div>
               </div>
 
