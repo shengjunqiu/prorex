@@ -11,11 +11,12 @@ export const Footer: React.FC = () => {
           
           {/* Brand Col */}
           <div className="md:col-span-5 flex flex-col items-start">
-            <a href="#" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-sky-500 flex items-center justify-center text-white font-black text-lg">
-                P
-              </div>
-              <span className="text-xl font-bold tracking-tight text-white">PROREX</span>
+            <a href="#" className="flex items-center mb-4 group">
+              <img
+                src="/logo.png"
+                alt="Prorex Logo"
+                className="h-14 sm:h-16 w-auto object-contain transition-opacity group-hover:opacity-90"
+              />
             </a>
             <p className="text-slate-400 text-sm max-w-sm mb-4 leading-relaxed">
               Technology-led access to global markets.

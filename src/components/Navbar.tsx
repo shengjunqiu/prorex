@@ -35,21 +35,12 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-primary via-primary-dark to-sky-600 flex items-center justify-center p-0.5 shadow-lg shadow-primary/20 group-hover:shadow-primary/40 transition-all">
-              <div className="w-full h-full bg-[#060B14] rounded-[10px] flex items-center justify-center">
-                <span className="text-primary font-black text-xl tracking-tighter">P</span>
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-bold tracking-tight text-white flex items-center gap-1">
-                PROREX
-                <span className="inline-block w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
-              </span>
-              <span className="text-[10px] uppercase tracking-widest text-slate-400 font-medium -mt-1">
-                Limited
-              </span>
-            </div>
+          <a href="#" className="flex items-center group">
+            <img
+              src="/logo.png"
+              alt="Prorex Logo"
+              className="h-14 sm:h-16 w-auto object-contain transition-transform group-hover:scale-105"
+            />
           </a>
 
           {/* Desktop Navigation */}
