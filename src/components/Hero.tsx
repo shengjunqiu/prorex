@@ -38,7 +38,7 @@ export const Hero: React.FC = () => {
             {/* Action Buttons */}
             <div className="flex flex-wrap items-center gap-4 mb-10 w-full sm:w-auto">
               <a
-                href="#accounts"
+                href="https://client.prorexltd.com/register"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-base font-semibold text-white bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 hover:from-sky-400 hover:to-blue-500 shadow-xl shadow-sky-500/25 hover:shadow-sky-500/40 hover:-translate-y-0.5 transition-all duration-200"
               >
                 <span>Start trading</span>

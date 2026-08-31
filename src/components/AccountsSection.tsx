@@ -85,7 +85,7 @@ export const AccountsSection: React.FC = () => {
                   </p>
 
                   <a
-                    href="#"
+                    href="https://client.prorexltd.com/register"
                     className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-base font-semibold text-white bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 hover:from-sky-400 hover:to-blue-500 shadow-xl shadow-sky-500/30 hover:shadow-sky-500/50 hover:-translate-y-0.5 transition-all duration-200"
                   >
                     <span>Open Standard account</span>
@@ -161,7 +161,7 @@ export const AccountsSection: React.FC = () => {
                   </p>
 
                   <a
-                    href="#"
+                    href="https://client.prorexltd.com/register"
                     className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-base font-semibold text-white bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 hover:from-sky-400 hover:to-blue-500 shadow-xl shadow-sky-500/30 hover:shadow-sky-500/50 hover:-translate-y-0.5 transition-all duration-200"
                   >
                     <span>Open Pro account</span>
@@ -235,7 +235,7 @@ export const AccountsSection: React.FC = () => {
                   </p>
 
                   <a
-                    href="#"
+                    href="https://client.prorexltd.com/register"
                     className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-base font-semibold text-white bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 hover:from-sky-400 hover:to-blue-500 shadow-xl shadow-sky-500/30 hover:shadow-sky-500/50 hover:-translate-y-0.5 transition-all duration-200"
                   >
                     <span>Open Cents account</span>

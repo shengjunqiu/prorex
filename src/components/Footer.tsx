@@ -42,7 +42,7 @@ export const Footer: React.FC = () => {
                 <li><a href="#accounts" className="hover:text-sky-400 transition-colors">Standard Account</a></li>
                 <li><a href="#accounts" className="hover:text-sky-400 transition-colors">Pro Account</a></li>
                 <li><a href="#accounts" className="hover:text-sky-400 transition-colors">Cents Account</a></li>
-                <li><a href="#accounts" className="hover:text-sky-400 transition-colors">Open Account</a></li>
+                <li><a href="https://client.prorexltd.com/register" className="hover:text-sky-400 transition-colors">Open Account</a></li>
               </ul>
             </div>
 

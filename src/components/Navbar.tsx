@@ -59,13 +59,13 @@ export const Navbar: React.FC = () => {
           {/* Action Buttons */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="#"
+              href="https://client.prorexltd.com/login"
               className="px-4 py-2 text-sm font-semibold text-slate-300 hover:text-white transition-colors"
             >
               Client login
             </a>
             <a
-              href="#accounts"
+              href="https://client.prorexltd.com/register"
               className="relative inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 shadow-md shadow-sky-500/25 hover:shadow-lg hover:shadow-sky-500/40 hover:-translate-y-0.5 transition-all duration-200"
             >
               <span>Open an account</span>
@@ -105,14 +105,14 @@ export const Navbar: React.FC = () => {
             })}
             <div className="h-px bg-slate-800 my-2" />
             <a
-              href="#"
+              href="https://client.prorexltd.com/login"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full text-center py-3 text-slate-300 font-semibold"
             >
               Client login
             </a>
             <a
-              href="#accounts"
+              href="https://client.prorexltd.com/register"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full flex items-center justify-center gap-2 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-sky-500 to-blue-600 shadow-lg shadow-sky-500/30"
             >

@@ -57,7 +57,7 @@ export const PlatformSection: React.FC = () => {
             </div>
 
             <a
-              href="#"
+              href="https://client.prorexltd.com/register"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 shadow-lg shadow-sky-500/25 hover:shadow-sky-500/40 transition-all duration-200"
             >
               <span>Explore MT5</span>

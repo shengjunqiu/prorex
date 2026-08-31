@@ -44,28 +44,28 @@ export const PRODUCT_LIST: ProductItem[] = [
   { symbol: 'USDHKD', description: 'US Dollar vs Hong Kong Dollar', category: 'Forex', leverage: '1:1000' },
 
   // Indices
-  { symbol: 'ASX', description: 'ASX200 (Australia)', category: 'Indices', contractSize: '1 lot = 100 (#N-AUS200)', leverage: '1:1000' },
-  { symbol: 'CAC', description: 'CAC40 (France)', category: 'Indices', contractSize: '1 lot = 100 (#N-CAC40)', leverage: '1:1000' },
-  { symbol: 'ChinaA50', description: 'FTSE CHINA A50', category: 'Indices', contractSize: '1 lot = 100 (#XIN9)', leverage: '1:1000' },
-  { symbol: 'DAX', description: 'D40EUR (GER40)', category: 'Indices', contractSize: '1 lot = 100', leverage: '1:1000' },
-  { symbol: 'DowJones', description: 'DowJones30 (US)', category: 'Indices', contractSize: '1 lot = 100 (#N-WS30)', leverage: '1:1000' },
-  { symbol: 'EuroStoxx', description: 'DJ Euro Stoxx 50', category: 'Indices', contractSize: '1 lot = 100 (#N-ESX50)', leverage: '1:1000' },
-  { symbol: 'FTSE', description: 'FTSE100 (UK)', category: 'Indices', contractSize: '1 lot = 100 (#N-UK100)', leverage: '1:1000' },
-  { symbol: 'HangSeng', description: 'Hang Seng (Hong Kong)', category: 'Indices', contractSize: '1 lot = 1000 (#N-HK50)', leverage: '1:1000' },
-  { symbol: 'Nasdaq', description: 'Nasdaq100 (US)', category: 'Indices', contractSize: '1 lot = 100 (#N-NAS100)', leverage: '1:1000' },
-  { symbol: 'Nikkei', description: 'Nikkei225 (Japan)', category: 'Indices', contractSize: '1 lot = 1000 (#N-JPN225)', leverage: '1:1000' },
-  { symbol: 'SP500', description: 'S&P500 (US)', category: 'Indices', contractSize: '1 lot = 100 (#N-SP500)', leverage: '1:1000' },
+  { symbol: 'ASX', description: 'ASX200 (Australia)', category: 'Indices', contractSize: '1 lot = 100 (#N-AUS200)', leverage: '1:100' },
+  { symbol: 'CAC', description: 'CAC40 (France)', category: 'Indices', contractSize: '1 lot = 100 (#N-CAC40)', leverage: '1:100' },
+  { symbol: 'ChinaA50', description: 'FTSE CHINA A50', category: 'Indices', contractSize: '1 lot = 100 (#XIN9)', leverage: '1:100' },
+  { symbol: 'DAX', description: 'D40EUR (GER40)', category: 'Indices', contractSize: '1 lot = 100', leverage: '1:100' },
+  { symbol: 'DowJones', description: 'DowJones30 (US)', category: 'Indices', contractSize: '1 lot = 100 (#N-WS30)', leverage: '1:100' },
+  { symbol: 'EuroStoxx', description: 'DJ Euro Stoxx 50', category: 'Indices', contractSize: '1 lot = 100 (#N-ESX50)', leverage: '1:100' },
+  { symbol: 'FTSE', description: 'FTSE100 (UK)', category: 'Indices', contractSize: '1 lot = 100 (#N-UK100)', leverage: '1:100' },
+  { symbol: 'HangSeng', description: 'Hang Seng (Hong Kong)', category: 'Indices', contractSize: '1 lot = 1000 (#N-HK50)', leverage: '1:100' },
+  { symbol: 'Nasdaq', description: 'Nasdaq100 (US)', category: 'Indices', contractSize: '1 lot = 100 (#N-NAS100)', leverage: '1:100' },
+  { symbol: 'Nikkei', description: 'Nikkei225 (Japan)', category: 'Indices', contractSize: '1 lot = 1000 (#N-JPN225)', leverage: '1:100' },
+  { symbol: 'SP500', description: 'S&P500 (US)', category: 'Indices', contractSize: '1 lot = 100 (#N-SP500)', leverage: '1:100' },
 
   // Energies
-  { symbol: 'UKOil', description: 'Spot Brent Crude Oil', category: 'Energies', contractSize: '1 lot = 1000 Barrels', leverage: '1:1000' },
-  { symbol: 'USOil', description: 'Spot WTI Crude Oil', category: 'Energies', contractSize: '1 lot = 1000 WTI', leverage: '1:1000' },
+  { symbol: 'UKOil', description: 'Spot Brent Crude Oil', category: 'Energies', contractSize: '1 lot = 1000 Barrels', leverage: '1:100' },
+  { symbol: 'USOil', description: 'Spot WTI Crude Oil', category: 'Energies', contractSize: '1 lot = 1000 WTI', leverage: '1:100' },
 
   // Crypto
-  { symbol: 'BTCUSD', description: 'Bitcoin vs USD', category: 'Crypto', contractSize: '1 lot = 1 BTC', leverage: '1:1000' },
-  { symbol: 'ETHUSD', description: 'Ethereum vs USD', category: 'Crypto', contractSize: '1 lot = 1 ETH', leverage: '1:1000' },
-  { symbol: 'BCHUSD', description: 'Bitcoin Cash vs USD', category: 'Crypto', contractSize: '1 lot = 1 BCH', leverage: '1:1000' },
-  { symbol: 'LTCUSD', description: 'LiteCoin vs USD', category: 'Crypto', contractSize: '1 lot = 1 LTC', leverage: '1:1000' },
-  { symbol: 'XMRUSD', description: 'Monero vs USD', category: 'Crypto', contractSize: '1 lot = 1 XMR', leverage: '1:1000' },
+  { symbol: 'BTCUSD', description: 'Bitcoin vs USD', category: 'Crypto', contractSize: '1 lot = 1 BTC', leverage: '1:5' },
+  { symbol: 'ETHUSD', description: 'Ethereum vs USD', category: 'Crypto', contractSize: '1 lot = 1 ETH', leverage: '1:5' },
+  { symbol: 'BCHUSD', description: 'Bitcoin Cash vs USD', category: 'Crypto', contractSize: '1 lot = 1 BCH', leverage: '1:5' },
+  { symbol: 'LTCUSD', description: 'LiteCoin vs USD', category: 'Crypto', contractSize: '1 lot = 1 LTC', leverage: '1:5' },
+  { symbol: 'XMRUSD', description: 'Monero vs USD', category: 'Crypto', contractSize: '1 lot = 1 XMR', leverage: '1:5' },
 
   // Metals
   { symbol: 'XAUUSD', description: 'Gold vs USD', category: 'Metals', contractSize: '1 lot = 100 oz', leverage: '1:1000' },

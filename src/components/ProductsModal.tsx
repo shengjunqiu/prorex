@@ -173,7 +173,7 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose, i
               Close
             </button>
             <a
-              href="#accounts"
+              href="https://client.prorexltd.com/register"
               onClick={onClose}
               className="inline-flex items-center gap-1.5 px-6 py-2.5 rounded-full text-xs font-semibold text-white bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 shadow-md shadow-sky-500/30 transition-all"
             >

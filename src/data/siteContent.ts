@@ -37,10 +37,10 @@ export const MARKET_CATEGORIES = [
     description: 'Follow the performance of leading global market benchmarks through index CFDs.',
     actionText: 'View indices →',
     pairs: [
-      { name: 'US500 (S&P)', spread: '0.4 pts', lev: '1:1000' },
-      { name: 'US100 (Nasdaq)', spread: '0.8 pts', lev: '1:1000' },
-      { name: 'US30 (Dow Jones)', spread: '1.5 pts', lev: '1:1000' },
-      { name: 'UK100 (FTSE)', spread: '1.0 pts', lev: '1:1000' }
+      { name: 'US500 (S&P)', spread: '0.4 pts', lev: '1:100' },
+      { name: 'US100 (Nasdaq)', spread: '0.8 pts', lev: '1:100' },
+      { name: 'US30 (Dow Jones)', spread: '1.5 pts', lev: '1:100' },
+      { name: 'UK100 (FTSE)', spread: '1.0 pts', lev: '1:100' }
     ]
   },
   {
@@ -49,10 +49,10 @@ export const MARKET_CATEGORIES = [
     description: 'Trade global crude energy commodities including Spot Brent and WTI crude oil.',
     actionText: 'Explore energies →',
     pairs: [
-      { name: 'UKOil (Brent)', spread: '2.0 pts', lev: '1:1000' },
-      { name: 'USOil (WTI)', spread: '2.0 pts', lev: '1:1000' },
-      { name: 'Natural Gas', spread: '2.5 pts', lev: '1:1000' },
-      { name: 'Gasoline', spread: '3.0 pts', lev: '1:1000' }
+      { name: 'UKOil (Brent)', spread: '2.0 pts', lev: '1:100' },
+      { name: 'USOil (WTI)', spread: '2.0 pts', lev: '1:100' },
+      { name: 'Natural Gas', spread: '2.5 pts', lev: '1:100' },
+      { name: 'Gasoline', spread: '3.0 pts', lev: '1:100' }
     ]
   },
   {
@@ -61,10 +61,10 @@ export const MARKET_CATEGORIES = [
     description: 'Gain exposure to top digital currencies with flexible leverage and 24/7 trading availability.',
     actionText: 'Discover crypto →',
     pairs: [
-      { name: 'BTC/USD (Bitcoin)', spread: 'Tight', lev: '1:1000' },
-      { name: 'ETH/USD (Ethereum)', spread: 'Tight', lev: '1:1000' },
-      { name: 'LTC/USD (Litecoin)', spread: 'Tight', lev: '1:1000' },
-      { name: 'BCH/USD (Bitcoin Cash)', spread: 'Tight', lev: '1:1000' }
+      { name: 'BTC/USD (Bitcoin)', spread: 'Tight', lev: '1:5' },
+      { name: 'ETH/USD (Ethereum)', spread: 'Tight', lev: '1:5' },
+      { name: 'LTC/USD (Litecoin)', spread: 'Tight', lev: '1:5' },
+      { name: 'BCH/USD (Bitcoin Cash)', spread: 'Tight', lev: '1:5' }
     ]
   },
   {
